@@ -81,16 +81,16 @@ app.get('/health', (req, res) => {
 });
 
 // API routes
-app.use('/api/auth', authRoutes);
-app.use('/api/pre-incubation', preIncubationRoutes);
-app.use('/api/incubation', incubationRoutes);
-app.use('/api/contact', contactRoutes);
-app.use('/api/announcement', announcementRoutes);
-app.use('/api/program', programRoutes);
-app.use('/api/event', eventRoutes);
-app.use('/api/blog', blogRoutes);
-app.use('/api/admin', adminRoutes);
-app.use('/api/mentor', mentorRoutes);
+app.use('/apiic_api/auth', authRoutes);
+app.use('/apiic_api/pre-incubation', preIncubationRoutes);
+app.use('/apiic_api/incubation', incubationRoutes);
+app.use('/apiic_api/contact', contactRoutes);
+app.use('/apiic_api/announcement', announcementRoutes);
+app.use('/apiic_api/program', programRoutes);
+app.use('/apiic_api/event', eventRoutes);
+app.use('/apiic_api/blog', blogRoutes);
+app.use('/apiic_api/admin', adminRoutes);
+app.use('/apiic_api/mentor', mentorRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
