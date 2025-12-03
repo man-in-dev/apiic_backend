@@ -16,6 +16,10 @@ const blogSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
+    link: {
+        type: String,
+        trim: true
+    },
     tags: {
         type: [String],
         default: []

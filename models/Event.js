@@ -37,6 +37,11 @@ const eventSchema = new mongoose.Schema({
         trim: true,
         maxlength: [200, 'Venue cannot exceed 200 characters']
     },
+    link: {
+        type: String,
+        trim: true,
+        maxlength: [500, 'Link cannot exceed 500 characters']
+    },
     speaker: {
         type: String,
         trim: true,

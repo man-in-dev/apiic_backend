@@ -12,6 +12,11 @@ const programSchema = new mongoose.Schema({
         trim: true,
         maxlength: [100, 'Duration cannot exceed 100 characters']
     },
+    link: {
+        type: String,
+        trim: true,
+        maxlength: [500, 'Link cannot exceed 500 characters']
+    },
     bullets: {
         type: [String],
         validate: v => Array.isArray(v) && v.length > 0,

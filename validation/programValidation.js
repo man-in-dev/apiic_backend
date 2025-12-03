@@ -5,6 +5,12 @@ const base = {
     duration: Joi.string().trim().max(100).allow('').optional(),
     bullets: Joi.array().items(Joi.string().trim().min(1)).min(1).required(),
     isActive: Joi.boolean().optional(),
+    link: Joi.string()
+        .trim()
+        .uri()
+        .max(500)
+        .allow('', null)
+        .optional(),
 };
 
 const createProgramValidation = Joi.object(base);

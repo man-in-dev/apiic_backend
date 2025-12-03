@@ -68,6 +68,17 @@ const baseEventSchema = {
             'string.max': 'Venue cannot exceed 200 characters'
         }),
 
+    link: Joi.string()
+        .trim()
+        .uri()
+        .max(500)
+        .allow('', null)
+        .optional()
+        .messages({
+            'string.uri': 'Link must be a valid URL',
+            'string.max': 'Link cannot exceed 500 characters'
+        }),
+
     speaker: Joi.string()
         .trim()
         .max(200)
