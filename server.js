@@ -37,7 +37,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-    origin: ['apiic.org', 'admin.apiic.org'],
+    origin: ['https://admin.apiic.org', 'https://apiic.org'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
