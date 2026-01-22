@@ -21,6 +21,9 @@ const incubationApplicationSchema = Joi.object({
     businessModel: Joi.string().required().trim().min(50).max(1000),
     rndStatus: Joi.string().required().trim().min(50).max(1000),
     trlStatus: Joi.string().required().trim().min(50).max(1000),
+    image: Joi.string().uri().allow('', null).optional().messages({
+        'string.uri': 'Please provide a valid image URL'
+    }),
 
     // Team & IP
     teamMembers: Joi.string().required().trim().min(50).max(1000),
@@ -89,6 +92,9 @@ const updateIncubationApplicationSchema = Joi.object({
     businessModel: Joi.string().trim().min(50).max(1000),
     rndStatus: Joi.string().trim().min(50).max(1000),
     trlStatus: Joi.string().trim().min(50).max(1000),
+    image: Joi.string().uri().allow('', null).optional().messages({
+        'string.uri': 'Please provide a valid image URL'
+    }),
     teamMembers: Joi.string().trim().min(50).max(1000),
     patents: Joi.string().allow('').trim(),
     awards: Joi.string().allow('').trim(),

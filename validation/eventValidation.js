@@ -221,6 +221,14 @@ const baseEventSchema = {
             'string.max': 'Highlight cannot exceed 500 characters'
         }),
 
+    image: Joi.string()
+        .uri()
+        .allow('', null)
+        .optional()
+        .messages({
+            'string.uri': 'Please provide a valid image URL'
+        }),
+
     status: Joi.string()
         .valid(...eventStatuses)
         .optional()

@@ -46,6 +46,11 @@ const announcementSchema = new mongoose.Schema({
         type: Date,
         default: null
     },
+    image: {
+        type: String,
+        trim: true,
+        default: null
+    },
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',

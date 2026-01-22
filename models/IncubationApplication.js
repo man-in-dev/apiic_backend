@@ -83,6 +83,11 @@ const incubationApplicationSchema = new mongoose.Schema({
         required: [true, 'TRL status is required'],
         trim: true
     },
+    image: {
+        type: String,
+        trim: true,
+        default: null
+    },
 
     // Team & IP
     teamMembers: {

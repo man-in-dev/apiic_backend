@@ -49,7 +49,15 @@ const announcementValidation = Joi.object({
 
     expiresAt: Joi.date()
         .allow(null)
+        .optional(),
+
+    image: Joi.string()
+        .uri()
+        .allow('', null)
         .optional()
+        .messages({
+            'string.uri': 'Please provide a valid image URL'
+        })
 });
 
 // Validation for updating announcement
@@ -87,7 +95,15 @@ const announcementUpdateValidation = Joi.object({
 
     expiresAt: Joi.date()
         .allow(null)
+        .optional(),
+
+    image: Joi.string()
+        .uri()
+        .allow('', null)
         .optional()
+        .messages({
+            'string.uri': 'Please provide a valid image URL'
+        })
 });
 
 // Validation for query parameters

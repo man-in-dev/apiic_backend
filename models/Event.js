@@ -122,6 +122,11 @@ const eventSchema = new mongoose.Schema({
         trim: true,
         maxlength: [500, 'Highlight cannot exceed 500 characters']
     },
+    image: {
+        type: String,
+        trim: true,
+        default: null
+    },
     status: {
         type: String,
         enum: ['upcoming', 'ongoing', 'completed', 'cancelled'],
